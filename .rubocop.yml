@@ -1,0 +1,17 @@
+inherit_from: .rubocop_todo.yml
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+  IgnoredMethods: ['describe', 'context']
+Style/Documentation:
+  Enabled: false
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/environments/*'
+    - 'bin/*'
+    - 'node_modules/**/*'
+  NewCops: enable
+  SuggestExtensions: false
